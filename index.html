@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+  <link href="./src/costem.css" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+<!--   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+<body class="bg-zinc-950">
+ <!-- NAVBAR -->
+ <div class="fixed bottom-0 z-10 w-full py-4 rounded-xl bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-xl bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100">
+  <div class="flex justify-center text-gray-200">
+   <a class="mx-2 text-sm" href="">About</a>
+   <a class="mx-2 text-sm" href="">Resume</a>
+   <a class="mx-2 text-sm" href="">project</a>
+   <a class="mx-2 text-sm" href="">Contact</a>
+  </div>
+ </div>
+ <!-- END NAVBAR -->
+ <!-- PROFILE -->
+<section class="mx-4 my-4 rounded-xl ring-1 ring-gray-700 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white overflow-hidden">
+  <!-- Header -->
+  <button onclick="toggleAccordion()" class="w-full px-4 py-4 flex justify-between items-center text-left rounded-t-xl">
+    <div class="flex items-center gap-4">
+      <img src="img/profile.png" class="w-20 h-20 rounded-xl bg-gray-400 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100" />
+      <div>
+        <h2 class="font-semibold text-lg mb-1">Raihsa Firza Ramadan</h2>
+        <span class="bg-gray-700 text-[12px] text-white px-2 py-1 rounded-lg">Frontend Developer</span>
+      </div>
+    </div>
+    <svg id="chevron" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2"
+      viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  <!-- Content -->
+<div id="accordionContent" class="px-4 overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+  <hr class="border-gray-700 my-2">
+  <div class="pt-4 pb-4 space-y-4 text-sm text-white">
+    <!-- Email -->
+    <div class="flex items-start gap-4">
+      <span class="material-symbols-outlined text-sky-500 text-xl bg-gray-800 p-2 rounded-md">mail</span>
+      <div>
+        <p class="text-gray-400 text-xs">EMAIL</p>
+        <p>raihsahacker@gmail.com</p>
+      </div>
+    </div>
+    <!-- Phone -->
+    <div class="flex items-start gap-4">
+      <span class="material-symbols-outlined text-sky-500 text-xl bg-gray-800 p-2 rounded-md">call</span>
+      <div>
+        <p class="text-gray-400 text-xs">PHONE</p>
+        <p>+62 812-3456-7890</p>
+      </div>
+    </div>
+    <!-- Location -->
+    <div class="flex items-start gap-4">
+      <span class="material-symbols-outlined text-sky-500 text-xl bg-gray-800 p-2 rounded-md ">location_on</span>
+      <div>
+        <p class="text-gray-400 text-xs">LOCATION</p>
+        <p>Bandung, Indonesia</p>
+      </div>
+    </div>
+  </div>
+   <hr class="border-gray-700 my-2">
+  <div class="sosial media flex pb-2">
+   <div class="bg-sky-500 w-10 h-10 m-2 rounded-xl"></div>
+   <div class="bg-sky-500 w-10 h-10 m-2 rounded-xl"></div>
+   <div class="bg-sky-500 w-10 h-10 m-2 rounded-xl"></div>
+   <div class="bg-sky-500 w-10 h-10 m-2 rounded-xl"></div>
+   <div class="bg-sky-500 w-10 h-10 m-2 rounded-xl"></div>
+  </div>
+</div>
+</section>
+<!-- END PROFILE -->
+<!-- START MAIN CONTENT -->
+<section class="mx-4 my-4 rounded-xl ring-1 ring-gray-700 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white">
+ <div class="px-4 py-4 space-y-4">
+ <h1 class="text-2xl font-semibold">About Me</h1>
+ <div class="w-20 h-2 bg-sky-500 rounded-full">
+ </div>
+ <p class="my-4 text-md">
+  A passionate Flutter developer with strong expertise in cross-platform apps, REST APIs, UI/UX, widgets, and state management solutions. Proven track record in delivering cutting-edge solutions, including API integration, third-party libraries, and performance optimization. Adept at debugging to ensure high-quality, responsive apps and An agile collaborator committed to staying current with industry trends.
+  <br>
+  <br>
+  If you're seeking a skilled Flutter developer to breathe life into your project and exceed your expectations, I am here to collaborate and create magic together. Reach out, and let's transform your vision into a reality!
+ </p>
+ </div>
+ <div class="px-4 py-4 space-y-4">
+  <h1>What i'm doing</h1>
+  <div class="card 1 ">
+   <div class="w-full my-4 h-48 text-center px-4 py-4 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-xl bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 rounded-xl">
+    <div class="w-20 h-20 bg-sky-500"></div>
+    <h1>Web developer</h1>
+    <span>High-quality development of sites at the professional level.</span>
+   </div>
+   <div class="w-full my-4 h-48 text-center px-4 py-4 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-xl bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 rounded-xl">
+    <div class="w-20 h-20 bg-sky-500"></div>
+    <h1>Web developer</h1>
+    <span>High-quality development of sites at the professional level.</span>
+   </div>
+   <div class="w-full my-4 h-48 text-center px-4 py-4 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-xl bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 rounded-xl">
+    <div class="w-20 h-20 bg-sky-500"></div>
+    <h1>Web developer</h1>
+    <span>High-quality development of sites at the professional level.</span>
+   </div>
+   <div class="w-full my-4 h-48 text-center px-4 py-4 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-xl bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 rounded-xl">
+    <div class="w-20 h-20 bg-sky-500"></div>
+    <h1>Web developer</h1>
+    <span>High-quality development of sites at the professional level.</span>
+   </div>
+  </div>
+ </div>
+</section>
+<!-- END MAIN CONTENT -->
+
+<!-- Tailwind + Icons -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<script src="main.js"></script>
+
+
+</body>
+</html>
