@@ -11,25 +11,25 @@
 <!--   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
-<body class="bg-zinc-950">
+<body class="bg-gray-800">
  <!-- NAVBAR -->
- <div class="fixed bottom-0 z-10 w-full py-4 rounded-xl bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-xl bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100">
+<div class="fixed bottom-0 z-10 w-full py-4 rounded-xl bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100">
   <div class="flex justify-center text-gray-200">
-   <a class="mx-2 text-sm" href="">About</a>
-   <a class="mx-2 text-sm" href="">Resume</a>
-   <a class="mx-2 text-sm" href="">project</a>
-   <a class="mx-2 text-sm" href="">Contact</a>
+    <button onclick="showSection('about')" class="mx-2 text-sm hover:underline">About</button>
+    <button onclick="showSection('resume')" class="mx-2 text-sm hover:underline">Resume</button>
+    <button onclick="showSection('project')" class="mx-2 text-sm hover:underline">Project</button>
+    <button onclick="showSection('contact')" class="mx-2 text-sm hover:underline">Contact</button>
   </div>
- </div>
+</div>
  <!-- END NAVBAR -->
  <!-- PROFILE -->
-<section class="mx-4 my-4 rounded-xl ring-1 ring-gray-700 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white overflow-hidden">
+<section class="always-visible lg:mx-36 lg:mt-10 mx-4 my-4 rounded-xl ring-1 ring-gray-700 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white overflow-hidden ">
   <!-- Header -->
   <button onclick="toggleAccordion()" class="w-full px-4 py-4 flex justify-between items-center text-left rounded-t-xl">
     <div class="flex items-center gap-4">
       <img src="img/profile.png" class="w-20 h-20 rounded-xl bg-gray-400 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100" />
       <div>
-        <h2 class="font-semibold text-lg mb-1">Raihsa Firza Ramadan</h2>
+        <h2 class="font-semibold text-lg mb-1">Rasya Firza Ramadan</h2>
         <span class="bg-gray-700 text-[12px] text-white px-2 py-1 rounded-lg">Frontend Developer</span>
       </div>
     </div>
@@ -48,7 +48,7 @@
       <span class="material-symbols-outlined text-sky-500 text-xl bg-gray-800 p-2 rounded-md">mail</span>
       <div>
         <p class="text-gray-400 text-xs">EMAIL</p>
-        <p>raihsahacker@gmail.com</p>
+        <p>rasyahacker@gmail.com</p>
       </div>
     </div>
     <!-- Phone -->
@@ -68,57 +68,198 @@
       </div>
     </div>
   </div>
-   <hr class="border-gray-700 my-2">
-  <div class="sosial media flex pb-2">
-   <div class="bg-sky-500 w-10 h-10 m-2 rounded-xl"></div>
-   <div class="bg-sky-500 w-10 h-10 m-2 rounded-xl"></div>
-   <div class="bg-sky-500 w-10 h-10 m-2 rounded-xl"></div>
-   <div class="bg-sky-500 w-10 h-10 m-2 rounded-xl"></div>
-   <div class="bg-sky-500 w-10 h-10 m-2 rounded-xl"></div>
-  </div>
+   <hr class="border-gray-700 my-2"><div class="sosial-media flex pb-2">
+  <!-- Instagram -->
+  <a href="https://www.instagram.com" target="_blank" class="bg-gray-800 w-10 h-10 m-2 rounded-xl flex items-center justify-center shadow-md">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" class="w-5 h-5 fill-current text-sky-500">
+  </a>
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com" target="_blank" class="bg-gray-800 w-10 h-10 m-2 rounded-xl flex items-center justify-center shadow-md">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn" class="w-5 h-5 fill-current text-sky-500">
+  </a>
+  <!-- GitHub -->
+  <a href="https://github.com" target="_blank" class="bg-gray-800 w-10 h-10 m-2 rounded-xl flex items-center justify-center shadow-md">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub" class="w-5 h-5 fill-current text-sky-500">
+  </a>
+  <!-- Twitter -->
+  <a href="https://twitter.com" target="_blank" class="bg-gray-800 w-10 h-10 m-2 rounded-xl flex items-center justify-center shadow-md">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/twitter.svg" alt="Twitter" class="w-5 h-5 fill-current text-sky-500">
+  </a>
+  <!-- Facebook -->
+  <a href="https://facebook.com" target="_blank" class="bg-gray-800 w-10 h-10 m-2 rounded-xl flex items-center justify-center shadow-md">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook" class="w-5 h-5 fill-current text-sky-500">
+  </a>
+</div>
+
 </div>
 </section>
 <!-- END PROFILE -->
 <!-- START MAIN CONTENT -->
-<section class="mx-4 my-4 rounded-xl ring-1 ring-gray-700 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white">
+<section id="about" class="lg:mx-36 mx-4 my-4 rounded-xl ring-1 ring-gray-700 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white block">
  <div class="px-4 py-4 space-y-4">
  <h1 class="text-2xl font-semibold">About Me</h1>
  <div class="w-20 h-2 bg-sky-500 rounded-full">
  </div>
- <p class="my-4 text-md">
-  A passionate Flutter developer with strong expertise in cross-platform apps, REST APIs, UI/UX, widgets, and state management solutions. Proven track record in delivering cutting-edge solutions, including API integration, third-party libraries, and performance optimization. Adept at debugging to ensure high-quality, responsive apps and An agile collaborator committed to staying current with industry trends.
-  <br>
-  <br>
-  If you're seeking a skilled Flutter developer to breathe life into your project and exceed your expectations, I am here to collaborate and create magic together. Reach out, and let's transform your vision into a reality!
+ <p class="my-4 text-md">Individu dengan minat tinggi di bidang teknologi, khususnya pengembangan website dan
+perbaikan perangkat elektronik. Cepat belajar, teliti, dan mampu bekerja secara mandiri
+maupun dalam tim. Berambisi menjadi Software Engineer yang menciptakan solusi digital
+inovatif dan berdampak.  
  </p>
  </div>
  <div class="px-4 py-4 space-y-4">
   <h1>What i'm doing</h1>
   <div class="card 1 ">
-   <div class="w-full my-4 h-48 text-center px-4 py-4 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-xl bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 rounded-xl">
-    <div class="w-20 h-20 bg-sky-500"></div>
-    <h1>Web developer</h1>
-    <span>High-quality development of sites at the professional level.</span>
-   </div>
-   <div class="w-full my-4 h-48 text-center px-4 py-4 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-xl bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 rounded-xl">
-    <div class="w-20 h-20 bg-sky-500"></div>
-    <h1>Web developer</h1>
-    <span>High-quality development of sites at the professional level.</span>
-   </div>
-   <div class="w-full my-4 h-48 text-center px-4 py-4 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-xl bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 rounded-xl">
-    <div class="w-20 h-20 bg-sky-500"></div>
-    <h1>Web developer</h1>
-    <span>High-quality development of sites at the professional level.</span>
-   </div>
-   <div class="w-full my-4 h-48 text-center px-4 py-4 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-xl bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 rounded-xl">
-    <div class="w-20 h-20 bg-sky-500"></div>
-    <h1>Web developer</h1>
-    <span>High-quality development of sites at the professional level.</span>
+   <div class="w-full space-y-4 my-4 text-center px-4 py-5 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur-xl bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100 rounded-xl">
+    <div class="w-20 h-20 bg-sky-500 mx-auto"></div>
+    <h1 class="text-2xl font-semibold">Web Developer</h1>
+    <span class="text-xl">High-quality development of sites at the professional level.</span>
    </div>
   </div>
  </div>
+  <div class="px-4 py-4 space-y-4"><div class="overflow-x-auto">
+<!-- Wrapper yang memungkinkan horizontal scroll dan animasi halus -->
+<div class="overflow-x-auto scroll-smooth">
+  <!-- Kontainer item skill -->
+  <div class="flex space-x-4 pr-4 py-4 w-max">
+    <!-- HTML -->
+    <div class="w-28 h-28 rounded flex items-center justify-center shadow-md flex-shrink-0
+                bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 
+                backdrop-saturate-100 backdrop-contrast-1000">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="w-16 h-16">
+    </div>
+    <!-- CSS -->
+    <div class="w-28 h-28 rounded flex items-center justify-center shadow-md flex-shrink-0
+                bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 
+                backdrop-saturate-100 backdrop-contrast-1000">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="w-16 h-16">
+    </div>
+    <!-- JavaScript -->
+    <div class="w-28 h-28 rounded flex items-center justify-center shadow-md flex-shrink-0
+                bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 
+                backdrop-saturate-100 backdrop-contrast-1000">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-16 h-16">
+    </div>
+    <!-- PHP -->
+    <div class="w-28 h-28 rounded flex items-center justify-center shadow-md flex-shrink-0
+                bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 
+                backdrop-saturate-100 backdrop-contrast-1000">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="w-16 h-16">
+    </div>
+    <!-- Tailwind CSS -->
+    <div class="w-28 h-28 rounded flex items-center justify-center shadow-md flex-shrink-0
+                bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 
+                backdrop-saturate-100 backdrop-contrast-1000">
+      <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" class="w-16 h-16">
+    </div>
+    <!-- React JS -->
+    <div class="w-28 h-28 rounded flex items-center justify-center shadow-md flex-shrink-0
+                bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 
+                backdrop-saturate-100 backdrop-contrast-1000">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React JS" class="w-16 h-16">
+    </div>
+    <!-- Laravel -->
+    <div class="w-28 h-28 rounded flex items-center justify-center shadow-md flex-shrink-0
+                bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 
+                backdrop-saturate-100 backdrop-contrast-1000">
+      <img src="https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg" alt="Laravel" class="w-16 h-16">
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+</div>
 </section>
 <!-- END MAIN CONTENT -->
+<section id="resume" class="lg:mx-36 mx-4 my-4 p-6 rounded-xl ring-1 ring-slate-700 bg-slate-800 bg-clip-padding backdrop-blur bg-opacity-10 text-white hidden">
+  <h2 class="text-2xl font-bold mb-6 border-b border-slate-600 pb-2 text-white">Resume</h2>
+
+  <!-- Timeline Container -->
+  <div class="relative border-l-2 border-blue-500 pl-6 space-y-10">
+
+    <!-- Education -->
+    <div class="relative">
+      <div class="absolute -left-[34px] top-1 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-white">
+        <!-- Academic Cap Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422A12.083 12.083 0 0118 20.5c-3.866 0-7-1.79-7-4v-4.5z" />
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-blue-400">Education</h3>
+      <div class="mt-2">
+        <div class="mb-4">
+          <h4 class="font-semibold text-white">SMK TARUNA HARAPAN 1 CIPATAT</h4>
+          <p>Rekaya Perangkat Lunak </p>
+          <p class="text-blue-400">2022 — 2025</p>
+        </div>
+<!--         <div class="mb-4">
+          <h4 class="font-semibold text-white">SMP NEGRI 1 CIPATAT</h4>
+          <p>Formal</p>
+          <p class="text-blue-400">2019 — 2022</p>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="relative">
+      <div class="absolute -left-[34px] top-1 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-white">
+        <!-- Briefcase Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 12h6m2 0h.01M4 6h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2zm4 0V4a2 2 0 012-2h4a2 2 0 012 2v2" />
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-blue-400">Experience</h3>
+      <div class="mt-2">
+        <h4 class="font-semibold text-white">Pengelola Data & Desainer Grafis (Magang)</h4>
+        <p>Kantor Bupati Bandung Barat || DISPORA</p>
+        <p class="text-blue-400">Juni, 2024 — Agustus, 2024 • 3 Bulan</p>
+        <p class="italic text-gray-400">Bandung Barat, Jawa Barat</p>
+        <ul class="list-disc pl-6 mt-2 space-y-1 text-sm text-gray-300">
+          <li>Mengelola surat masuk dan keluar secara digital menggunakan sistem e-Office Web
+KBB, termasuk pencatatan, klasifikasi, dan pengarsipan elektronik untuk mendukung
+efisiensi administrasi.</li>
+          <li>Menyusun dan memelihara arsip digital surat dan dokumen secara sistematis agar dapat
+diakses dengan mudah dan akurat oleh berbagai divisi dinas.</li>
+          <li>Mendesain berbagai materi visual seperti poster, infografis, dan banner menggunakan
+Canva, untuk mendukung kegiatan promosi dan informasi melalui media sosial serta
+publikasi internal.</li>
+          <li>Berkolaborasi dengan tim publikasi dalam mendokumentasikan kegiatan dinas,
+termasuk pengambilan gambar, pembuatan konten digital, dan pelaporan kegiatan
+secara visual.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <button class=" mt-5 py-4 w-full bg-sky-500 rounded">Donload</button>
+</section>
+<section id="project" class="lg:mx-36 mx-4 my-4 rounded-xl ring-1 ring-gray-700 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white hidden">
+  <h1>test2</h1>
+</section>
+<section id="contact" class="lg:mx-36 mx-4 my-4 rounded-xl ring-1 ring-gray-700 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white hidden">
+ <h1>test3</h1>
+</section><script>
+  function showSection(id) {
+    // Sembunyikan semua section kecuali yang class-nya always-visible (profile)
+    const sections = document.querySelectorAll('section:not(.always-visible)');
+    sections.forEach(section => {
+      section.classList.add('hidden');
+      section.classList.remove('block');
+    });
+
+    // Tampilkan section yang dipilih
+    const active = document.getElementById(id);
+    if (active) {
+      active.classList.remove('hidden');
+      active.classList.add('block');
+    }
+
+    // Scroll ke atas
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
 
 <!-- Tailwind + Icons -->
 <script src="https://cdn.tailwindcss.com"></script>

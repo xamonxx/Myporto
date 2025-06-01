@@ -3,3 +3,12 @@
 *{
  font-family: "Poppins", sans-serif;
 }
+
+    .section {
+      display: none;
+      padding: 20px;
+    }
+
+    .active {
+      display: block;
+    }
