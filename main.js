@@ -42,8 +42,7 @@
     document.getElementById('scroll-icons').appendChild(template.cloneNode(true));
     document.getElementById('scroll-icons-copy').appendChild(template.cloneNode(true));
     
-    
-        function showSection(id) {
+ function showSection(id) {
       const sections = document.querySelectorAll('section:not(.always-visible)');
       sections.forEach(section => {
         section.classList.add('hidden');

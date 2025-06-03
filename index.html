@@ -10,7 +10,28 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 <!--  <script src="https://cdn.tailwindcss.com"></script> -->
   <style>
+@keyframes scrollRight {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
 
+    .animate-scroll-right {
+      animation: scrollRight 10s linear infinite;
+      display: flex;
+      width: max-content;
+}
+.section {
+      display: none;
+      padding: 20px;
+    }
+
+    .active {
+      display: block;
+    }
   </style>
 </head>
 <body class="bg-black">
@@ -255,21 +276,7 @@ inovatif dan berdampak.
 </div>
   <!-- JavaScript -->
   <script>
-    function showSection(id) {
-      const sections = document.querySelectorAll('section:not(.always-visible)');
-      sections.forEach(section => {
-        section.classList.add('hidden');
-        section.classList.remove('block');
-      });
 
-      const active = document.getElementById(id);
-      if (active) {
-        active.classList.remove('hidden');
-        active.classList.add('block');
-      }
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
   </script>
   <script src="main.js"></script>
 </body>
