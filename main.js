@@ -19,16 +19,42 @@
     content.style.maxHeight = "0px"; // collapsed by default
   });
   
-  
   function showSection(id) {
-    const sections = document.querySelectorAll("section");
+    // Sembunyikan semua section kecuali yang class-nya always-visible (profile)
+    const sections = document.querySelectorAll('section:not(.always-visible)');
     sections.forEach(section => {
-      section.classList.add("hidden");
+      section.classList.add('hidden');
+      section.classList.remove('block');
     });
 
-    const target = document.getElementById(id);
-    if (target) {
-      target.classList.remove("hidden");
-      window.scrollTo({ top: 0, behavior: 'smooth' }); // scroll ke atas jika ingin
+    // Tampilkan section yang dipilih
+    const active = document.getElementById(id);
+    if (active) {
+      active.classList.remove('hidden');
+      active.classList.add('block');
     }
+
+    // Scroll ke atas
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+     // Menggandakan ikon dengan JavaScript
+    const template = document.getElementById('icons').content;
+    document.getElementById('scroll-icons').appendChild(template.cloneNode(true));
+    document.getElementById('scroll-icons-copy').appendChild(template.cloneNode(true));
+    
+    
+        function showSection(id) {
+      const sections = document.querySelectorAll('section:not(.always-visible)');
+      sections.forEach(section => {
+        section.classList.add('hidden');
+        section.classList.remove('block');
+      });
+
+      const active = document.getElementById(id);
+      if (active) {
+        active.classList.remove('hidden');
+        active.classList.add('block');
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
