@@ -1,52 +1,38 @@
 <!doctype html>
-<html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="./src/output.css" rel="stylesheet">
+  <link href="./src/output.css" rel="stylesheet">
   <link href="./src/costem.css" rel="stylesheet">
   <link rel="stylesheet" href="./src/animate.min.css">
-<!-- Link Font Awesome dari lokal -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-<!--  <script src="https://cdn.tailwindcss.com"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-@keyframes scrollRight {
-      0% {
-        transform: translateX(-50%);
-      }
-      100% {
-        transform: translateX(0);
-      }
+    @keyframes scrollRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
     }
-
     .animate-scroll-right {
       animation: scrollRight 10s linear infinite;
       display: flex;
       width: max-content;
-}
-.section {
-      display: none;
-      padding: 20px;
     }
-
-    .active {
-      display: block;
-    }
+    .section { display: none; padding: 20px; }
+    .active { display: block; }
   </style>
 </head>
-<body class="bg-black">
- <!-- NAVBAR -->
-<div class="fixed bottom-0 z-10 w-full py-4 rounded-xl bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100">
-  <div class="flex justify-center text-gray-200">
-    <button onclick="showSection('about')" class="mx-2 text-sm hover:underline">About</button>
-    <button onclick="showSection('resume')" class="mx-2 text-sm hover:underline">Resume</button>
-    <button onclick="showSection('project')" class="mx-2 text-sm hover:underline">Project</button>
-    <button onclick="showSection('contact')" class="mx-2 text-sm hover:underline">Contact</button>
-  </div>
-</div>
- <!-- END NAVBAR -->
- <!-- PROFILE -->
-<section class="always-visible lg:mx-36 lg:mt-10 mx-4 my-4 rounded-xl ring-1 ring-gray-700 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white overflow-hidden ">
+<body class="bg-slate-900 mb-[1000px]">
+   <!-- NAVBAR -->  
+   <nav class="fixed bottom-0 z-10 w-full py-4 rounded-xl bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100">
+    <div class="flex justify-center text-gray-200">
+      <button onclick="showSection('about')" class="mx-2 text-sm hover:underline">About</button>
+      <button onclick="showSection('resume')" class="mx-2 text-sm hover:underline">Resume</button>
+      <button onclick="showSection('project')" class="mx-2 text-sm hover:underline">Project</button>
+      <button onclick="showSection('contact')" class="mx-2 text-sm hover:underline">Contact</button>
+    </div>
+  </nav> 
+  <section class="always-visible lg:mx-36 lg:mt-10 mx-4 my-4 rounded-xl ring-1 ring-gray-700 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white overflow-hidden ">
   <!-- Header -->
   <button onclick="toggleAccordion()" class="w-full px-4 py-4 flex justify-between items-center text-left rounded-t-xl">
     <div class="flex items-center gap-4">
@@ -197,7 +183,9 @@ inovatif dan berdampak.
 
 </div>
 </section>
-<!-- END MAIN CONTENT --><section id="resume" class="animate__animated animate__fadeIn mx-4 lg:mx-36 my-4 p-5 rounded-xl ring-1 ring-slate-700 bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white hidden">
+
+<!-- END MAIN CONTENT -->
+<section id="resume" class="animate__animated animate__fadeIn mx-4 lg:mx-36 my-4 p-5 rounded-xl ring-1 ring-slate-700 bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white hidden">
   <h2 class="text-2xl font-bold mb-6 border-b border-slate-600 pb-2">Resume</h2>
 
   <!-- Timeline Container -->
@@ -249,35 +237,49 @@ inovatif dan berdampak.
   </div>
 
   <!-- Download Button -->
-  <button class="mt-8 w-full py-3 bg-sky-500 text-white font-semibold rounded-lg hover:bg-sky-600 transition">Download</button>
+<!-- Tombol Download -->
+<button id="downloadBtn" class="mt-8 w-full py-3 bg-sky-500 text-white font-semibold rounded-lg hover:bg-sky-600 transition">
+  Download Resume
+</button>
+
+<!-- Modal -->
 </section>
 
-<section id="project" class="lg:mx-36 mx-4 my-4 rounded-xl ring-1 ring-gray-700 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white hidden">
-  <h1>test2</h1>
+<section id="project" class="animate__animated animate__fadeIn lg:mx-36 mx-2 my-4 rounded-xl ring-1 ring-gray-700 bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white hidden">
+  <div class="px-4 sm:px-6 py-8">
+    <h1 class="text-2xl font-bold mb-6 border-b border-slate-600 pb-2 sm:text-left">Portfolio</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Project 1 -->
+      <div class="animate__animated animate__fadeIn animate__delay-0.5s rounded-xl p-4 shadow-md hover:scale-[1.02] transition-transform duration-200 ring-1 ring-gray-600 group">
+       <div class="w-full rounded-lg ring-2 ring-gray-600 overflow-clip ">
+        
+        <img src="img/todoapp.jpg" alt="Nagarik App" class="group-hover:scale-110 transition-all duration-[0.5s] " />
+       </div>
+        <div class="mt-4">
+          <h2 class="text-xl font-semibold">Todo App</h2>
+          <p class="text-sm text-gray-300">Web App</p>
+        </div>
+      </div>
+      
+      <div class="animate__animated animate__fadeIn animate__delay-0.7s rounded-xl p-4 shadow-md hover:scale-[1.02] transition-transform duration-200 ring-1 ring-gray-600 group">
+       <div class="w-full rounded-lg ring-2 ring-gray-600 overflow-clip ">
+        
+        <img src="img/todoapp.jpg" alt="Nagarik App" class="group-hover:scale-110 transition-all duration-[0.5s] " />
+       </div>
+        <div class="mt-4">
+          <h2 class="text-xl font-semibold">Todo App</h2>
+          <p class="text-sm text-gray-300">Web App</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
 </section>
+
 <section id="contact" class="lg:mx-36 mx-4 my-4 rounded-xl ring-1 ring-gray-700 bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-1000 text-white hidden">
  <h1>test3</h1>
 </section>
-  <!-- Konten HTML kamu tetap sama -->
-  <!-- ... -->
-  <div class="absolute inset-0 -z-10 w-full h-screen">
-  <ul class="absolute top-0 left-0 w-full h-[96%] overflow-hidden">
-    <li class="absolute bottom-[-150px] left-[25%] w-[80px] h-[80px] bg-white/20 animate-bubble"></li>
-    <li class="absolute bottom-[-150px] left-[10%] w-[20px] h-[20px] bg-white/20 animate-bubble-12 delay-[2000ms]"></li>
-    <li class="absolute bottom-[-150px] left-[70%] w-[20px] h-[20px] bg-white/20 animate-bubble delay-[4000ms]"></li>
-    <li class="absolute bottom-[-150px] left-[40%] w-[60px] h-[60px] bg-white/20 animate-bubble-18"></li>
-    <li class="absolute bottom-[-150px] left-[65%] w-[20px] h-[20px] bg-white/20 animate-bubble"></li>
-    <li class="absolute bottom-[-150px] left-[75%] w-[110px] h-[110px] bg-white/20 animate-bubble delay-[3000ms]"></li>
-    <li class="absolute bottom-[-150px] left-[35%] w-[150px] h-[150px] bg-white/20 animate-bubble delay-[7000ms]"></li>
-    <li class="absolute bottom-[-150px] left-[50%] w-[25px] h-[25px] bg-white/20 animate-bubble-45 delay-[15000ms]"></li>
-    <li class="absolute bottom-[-150px] left-[20%] w-[15px] h-[15px] bg-white/20 animate-bubble-35 delay-[2000ms]"></li>
-    <li class="absolute bottom-[-150px] left-[85%] w-[150px] h-[150px] bg-white/20 animate-bubble-11"></li>
-  </ul>
-</div>
-  <!-- JavaScript -->
-  <script>
-
-  </script>
-  <script src="main.js"></script>
-</body>
+ <script src="main.js"></script></body>
 </html>
