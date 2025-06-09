@@ -9,17 +9,23 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!--   <script src="https://cdn.tailwindcss.com"></script> -->
   <style>
-    @keyframes scrollRight {
+  .section { display: none; padding: 20px; }
+.active { display: block; }
+.fa-envelope, .fa-phone, .fa-map-marker-alt{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    }
+@keyframes scrollRight {
       0% { transform: translateX(-50%); }
       100% { transform: translateX(0); }
     }
-    .animate-scroll-right {
+.animate-scroll-right {
       animation: scrollRight 10s linear infinite;
       display: flex;
       width: max-content;
     }
-    .section { display: none; padding: 20px; }
-    .active { display: block; }
+
   </style>
 </head>
 <body class="bg-slate-900 mb-[1000px]">
@@ -65,7 +71,7 @@
 
   <!-- Phone -->
   <div class="flex items-start gap-4">
-    <i class="fas fa-phone fa-lg text-sky-500 bg-gray-800 p-2 w-10 h-10 flex items-center justify-center rounded-md"></i>
+    <i class="fas fa-phone fa-lg text-sky-500 bg-gray-800 p-2 w-10 h-10 flex justify-center items-center rounded-md"></i>
     <div>
       <p class="text-gray-400 text-xs">PHONE</p>
       <p>+62 812-3456-7890</p>
