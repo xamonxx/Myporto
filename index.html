@@ -307,20 +307,66 @@ inovatif dan berdampak.
   </div>
 
   <!-- Form -->
-  <div class="space-y-4">
-    <h3 class="text-2xl font-semibold mb-2">Contact Form</h3>
-    <form class="space-y-4">
-      <input type="text" placeholder="Full name" class="w-full p-3 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-      <input type="email" placeholder="Email address" class="w-full p-3 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-      <input type="text" placeholder="Subject" class="w-full p-3 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-      <textarea rows="5" placeholder="Your Message" class="w-full p-3 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
-      <button type="submit" class="flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 w-full rounded-md transition">
-        <i class="fas fa-paper-plane"></i>
-        Send Message
-      </button>
-    </form>
-  </div>
 
+<!-- Tambahkan di bagian <head> HTML -->
+<!-- Google reCAPTCHA v2 (opsional, tapi disarankan) -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<div class="space-y-4">
+  <h3 class="text-2xl font-semibold mb-2">Contact Form</h3>
+  <form action="https://formspree.io/f/xvgrkwoq" method="POST" class="space-y-4" onsubmit="return validateForm()">
+    
+    <!-- Honeypot (bot jebakan, disembunyikan) -->
+    <input type="text" name="_gotcha" style="display:none">
+
+    <input type="text" name="name" placeholder="Full name" 
+           class="w-full p-3 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+           required pattern="^[a-zA-Z\s]{3,50}$" title="Name should only contain letters and spaces.">
+    
+    <input type="email" name="email" placeholder="Email address" 
+           class="w-full p-3 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+           required>
+    
+    <input type="text" name="subject" placeholder="Subject" 
+           class="w-full p-3 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+           required minlength="3">
+    
+    <textarea name="message" rows="5" placeholder="Your Message"
+              class="w-full p-3 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              required minlength="10"></textarea>
+
+    <!-- reCAPTCHA v2 -->
+    <div class="g-recaptcha" data-sitekey="6Lc06VorAAAAAJLwzKCNUgzctzx81FgO3hGCsMGa"></div>
+
+    <button type="submit"
+            class="flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 w-full rounded-md transition">
+      <i class="fas fa-paper-plane"></i>
+      Send Message
+    </button>
+  </form>
+</div>
+
+<!-- JavaScript Validasi Manual -->
 </section>
+<script>
+function validateForm() {
+  // Tambahan validasi JavaScript jika diperlukan
+  const name = document.querySelector('[name="name"]').value.trim();
+  const message = document.querySelector('[name="message"]').value.trim();
+  const recaptcha = grecaptcha.getResponse();
+
+  if (name.length < 3 || message.length < 10) {
+    alert("Please fill in all fields correctly.");
+    return false;
+  }
+
+  if (recaptcha.length === 0) {
+    alert("Please complete the reCAPTCHA.");
+    return false;
+  }
+
+  return true;
+}
+</script>
  <script src="main.js"></script></body>
 </html>
