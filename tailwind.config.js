@@ -10,6 +10,13 @@ export default {
         sans: ['Poppins', 'sans-serif'],
         display: ['Poppins', 'sans-serif'],
       },
+      colors: {
+        primary: {
+          DEFAULT: '#18181b', // Ungu (indigo-600) contoh
+          text: '#facc15',   // Versi lebih terang
+          dark: '#4338ca'     // Versi lebih gelap
+        }
+      },
       keyframes: {
         animate: {
           '0%': {
@@ -35,4 +42,4 @@ export default {
     },
   },
   plugins: [],
-};
+}
